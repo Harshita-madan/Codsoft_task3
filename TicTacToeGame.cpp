@@ -99,9 +99,12 @@ void changePlayer (char &token ){
 }
 
 int main() {
+    char playAgain;
     
+    do{
     grid(board);
     displayGrid(board);
+    
     
     cout << Player1 << " will play first. "<< endl ;
     cout << "Player1 will use X "<< endl;
@@ -127,6 +130,9 @@ int main() {
                 changePlayer(token);
             }
         }
-    }
+    }  cout << "Do you want to play again? (y/n): ";
+        cin >> playAgain;
+    } while (playAgain == 'y');
+
     return 0;
 }
